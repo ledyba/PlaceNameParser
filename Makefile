@@ -1,4 +1,6 @@
 
+.PHONY: all jar run reload test install
+
 all:
 	sbt compile
 
@@ -10,3 +12,9 @@ run:
 
 reload:
 	sbt reload update eclipse
+
+test:
+	sbt test
+
+install:
+	sbt publishLocal publishM2

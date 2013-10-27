@@ -1,5 +1,5 @@
 
-.PHONY: all jar run reload test install
+.PHONY: all jar run reload test install update
 
 all:
 	sbt compile
@@ -10,8 +10,11 @@ jar:
 run:
 	sbt run
 
-reload:
-	sbt reload update eclipse
+reload: update
+	sbt eclipse
+
+update:
+	sbt reload update-classifiers
 
 test:
 	sbt test

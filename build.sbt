@@ -17,7 +17,9 @@ libraryDependencies += "com.novocode" % "junit-interface" % "0.10" % "test"
 
 // Read here for optional dependencies:
 // http://etorreborre.github.com/specs2/guide/org.specs2.guide.Runners.html#Dependencies
- 
-testOptions in Test += Tests.Argument("junitxml", "html", "console")
- 
 
+testOptions in Test += Tests.Argument(TestFrameworks.Specs2, "sequential", "true")
+
+testOptions in Test += Tests.Argument(TestFrameworks.Specs2, "junitxml","html","console")
+
+testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "junitxml(directory=\"target/test-reports\")")

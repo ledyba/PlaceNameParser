@@ -1,5 +1,5 @@
 
-.PHONY: all jar run reload test install update
+.PHONY: all jar run reload test install update tupdate
 
 all:
 	sbt compile
@@ -21,3 +21,10 @@ test:
 
 install:
 	sbt publishLocal publishM2
+
+template:
+	@if [ -n "$( git remote -v | grep ScalaTemplate | grep __template__ )" ]; then \
+		git remote add __template__ "git@github.com:ledyba/ScalaTemplate.git"; \
+	fi
+	git fetch __template__
+	git merge __template__/master

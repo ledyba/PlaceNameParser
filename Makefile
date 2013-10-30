@@ -23,6 +23,7 @@ install:
 	sbt publishLocal publishM2
 
 template:
-	@(git remote add __template__ "git@github.com:ledyba/ScalaTemplate.git" || true) > /dev/null 2>&1
+	@(git remote remove __template__ || true) > /dev/null 2>&1
+	@(git remote add __template__ "https://github.com/ledyba/ScalaTemplate.git" || true) > /dev/null 2>&1
 	git fetch __template__
 	git merge __template__/master

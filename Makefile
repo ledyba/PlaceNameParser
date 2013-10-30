@@ -1,5 +1,5 @@
 
-.PHONY: all jar run reload test install update tupdate
+.PHONY: all jar run reload test install update template
 
 all:
 	sbt compile

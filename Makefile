@@ -10,11 +10,11 @@ jar:
 run:
 	sbt run
 
-reload: update
-	sbt eclipse
+reload:
+	sbt reload update-classifiers update-sbt-classifiers eclipse
 
 update:
-	sbt reload update-classifiers
+	sbt reload update-classifiers update-sbt-classifiers
 
 test:
 	sbt test

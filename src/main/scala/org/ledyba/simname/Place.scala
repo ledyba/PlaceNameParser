@@ -45,7 +45,6 @@ object Place {
 				val nkey = pref+city+name;
 				if( !nhash.contains(nkey) && name!="以下に掲載がない場合" ){
 					lst += Place(pref, name, ruby);
-					println(nkey+"/"+ruby+"/"+ruby.size);
 					nhash.add(nkey);
 				}
 			}

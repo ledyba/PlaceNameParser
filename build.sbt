@@ -1,4 +1,4 @@
-name := "Sample"
+name := "SimilarName"
  
 version := "1.0"
  
@@ -14,6 +14,8 @@ resolvers ++= Seq(
 libraryDependencies += "org.scalatest" % "scalatest_2.10" % "2.0.M8"
 
 libraryDependencies += "com.novocode" % "junit-interface" % "0.10" % "test"
+
+libraryDependencies += "com.ibm.icu" % "icu4j" % "52.1"
 
 // Read here for optional dependencies:
 // http://etorreborre.github.com/specs2/guide/org.specs2.guide.Runners.html#Dependencies
